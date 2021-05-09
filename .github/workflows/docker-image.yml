@@ -17,7 +17,7 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file net3.1_java/Dockerfile --tag dotnet_3.1_java:$(date +%s) --tag dotnet_3.1_java:latest
       - name: Push to Docker Hub
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
