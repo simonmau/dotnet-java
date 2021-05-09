@@ -25,4 +25,4 @@ jobs:
         with:
           context: net3.1_java
           push: true
-          tags: simonmau/dotnet_3.1_java_11:latest
+          tags: simonmauracher/net3.1_java:latest
