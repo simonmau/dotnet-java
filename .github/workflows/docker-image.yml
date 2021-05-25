@@ -20,9 +20,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push
-        id: docker_build
+        id: docker_build_3.1
         uses: docker/build-push-action@v2
         with:
           context: net3.1_java
           push: true
           tags: simonmauracher/net3.1_java:latest
+      - name: Build and push
+        id: docker_build_5.0
+        uses: docker/build-push-action@v2
+        with:
+          context: net5.0_java
+          push: true
+          tags: simonmauracher/net5.0_java:latest
